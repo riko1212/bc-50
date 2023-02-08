@@ -20,12 +20,66 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
 
 .link {
   text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .title {
@@ -56,6 +110,8 @@ body {
 
 .header {
   background-color: #756767;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link {
@@ -105,6 +161,7 @@ body {
 
 .hero-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 .hero-title {
   font-family: 'Raleway', sans-serif;
@@ -112,6 +169,7 @@ body {
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--main-title-color);
+  margin-bottom: 20px;
 }
 
 .hero-post-title {
@@ -119,6 +177,8 @@ body {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+  max-width: 360px;
+  width: 400px;
 }
 
 /*--------------- ABOUT------------- */
@@ -135,9 +195,11 @@ body {
 
 .about-pre-title {
   color: #303030;
+  margin-bottom: 20px;
 }
 .about-title {
   color: var(--second-title-color);
+  margin-bottom: 20px;
 }
 
 .about-post-title {
@@ -145,12 +207,14 @@ body {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 20px;
 }
 .about-text {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 42px;
 }
 .about-btn {
   color: var(--second-btn-color);
@@ -163,15 +227,20 @@ body {
 }
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 .prices-title {
   color: var(--main-title-color);
+  margin-bottom: 44px;
 }
 
 .prices-list {
+  border: 1px solid #ffffff;
+  padding: 30px 21px;
 }
 
-.prices-item {
+.prices-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .prices-item-text {
@@ -183,6 +252,9 @@ body {
 
 .prices-btn {
   color: var(--main-btn-color);
+  display: block;
+  margin: 0 auto;
+  margin-top: 44px;
 }
 
 /*--------------- BENEFITS------------- */
@@ -196,9 +268,17 @@ body {
   font-weight: 700;
   font-size: 42px;
   line-height: calc(57 / 42);
-  text-align: center;
+
   letter-spacing: 0.05em;
   color: #303030;
+}
+
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+  text-align: center;
+  border: 1px solid;
 }
 .benefits-item-text {
   font-weight: 600;
@@ -206,16 +286,131 @@ body {
   line-height: 1.36;
   text-align: center;
   color: #303030;
+  margin-top: 6px;
 }
 .benefits-pre-title {
   color: #303030;
+  margin-bottom: 20px;
 }
 .benefits-title {
   color: #303030;
+  margin-bottom: 20px;
 }
 .benefits-post-title {
   font-size: 18px;
   line-height: 1.36;
   letter-spacing: 0.02em;
   color: #555555;
+}
+
+/*--------------- BARBERS------------- */
+
+.barbers {
+}
+
+.barbers-pre-title {
+  color: #303030;
+  margin-bottom: 20px;
+}
+
+.barbers-title {
+  color: #303030;
+  margin-bottom: 44px;
+}
+
+.barbers-list {
+}
+
+.barbers-item {
+}
+
+.barbers-wrap {
+  padding-top: 30px;
+}
+.barbers-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  color: #303030;
+}
+.barbers-item-text {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #ff6c00;
+}
+
+/*--------------- GALLERY------------- */
+
+.gallery {
+}
+
+.gallery-pre-title {
+  color: #303030;
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+}
+
+.gallery-item {
+}
+
+/*--------------- ONLINE------------- */
+
+.online {
+  background-color: #303030;
+}
+.online-title {
+  color: var(--main-title-color);
+}
+
+/*--------------- CONTACTS------------- */
+.contacts {
+  background-color: #303030;
+}
+
+.contacts-title {
+  color: var(--main-title-color);
+  margin-bottom: 40px;
+}
+.contacts-address {
+  margin-bottom: 70px;
+}
+.contacts-list {
+}
+
+.contacts-item + .contacts-item {
+  margin-top: 20px;
+}
+.contacts-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-item:first-child > .contacts-link {
+  font-weight: 700;
+}
+
+.contacts-subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.contacts-schedule {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
 }
