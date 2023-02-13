@@ -45,7 +45,9 @@
         <a class="header-tel link" href="tel:+380441111111"
           >+38 044 111 11 11</a
         >
-        <button class="header-btn btn" type="button">Online-booking</button>
+        <button class="header-btn btn" type="button" data-modal-open>
+          Online-booking
+        </button>
       </div>
     </header>
     <main>
@@ -210,12 +212,21 @@
 
           <ul class="barbers-list list">
             <li class="barbers-item">
-              <img
-                src="./img/barbers-img-1.jpeg"
-                alt="barber photo"
-                width="370"
-                height="346"
-              />
+              <div class="barbers-top-wrap">
+                <img
+                  src="./img/barbers-img-1.jpeg"
+                  alt="barber photo"
+                  width="370"
+                  height="346"
+                />
+                <p class="barbers-top-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Possimus repellat corporis vel cumque unde alias, laborum
+                  blanditiis! Assumenda delectus necessitatibus mollitia est
+                  nisi. Ducimus incidunt odio reprehenderit, eaque sit atque.
+                </p>
+              </div>
+
               <div class="barbers-wrap">
                 <h3 class="barbers-subtitle">John Smith</h3>
                 <p class="barbers-item-text">Extreme Barber</p>
@@ -420,5 +431,15 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="modal-close-icon" width="15" height="15">
+            <use href="./img/icons.svg#icon-instagram"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
