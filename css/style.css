@@ -74,7 +74,6 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
 }
 
 .section {
@@ -94,6 +93,16 @@ img {
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pre-title::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
 }
 
 .btn {
@@ -114,7 +123,8 @@ img {
 /*--------------- HEADER------------- */
 
 .header {
-  background-color: #756767;
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -145,6 +155,7 @@ img {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
+  transition: color 250ms linear;
 }
 
 .header-link:is(:hover, :focus) {
@@ -163,6 +174,12 @@ img {
 
 .header-btn {
   color: var(--main-btn-color);
+  transition: color 250ms linear, background-color 250ms linear;
+}
+
+.header-btn:is(:hover, :focus) {
+  color: #ffffff;
+  background-color: #ff6c00;
 }
 
 /*--------------- HERO------------- */
@@ -188,8 +205,25 @@ img {
   padding: 272px 100px 208px;
 }
 
-.hero-list {
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+  gap: 40px;
+}
+
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 
 .hero-item {
@@ -214,6 +248,28 @@ img {
   letter-spacing: 0.05em;
   color: var(--main-title-color);
   margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+.hero-title:hover::before {
+  color: aqua;
+}
+
+.hero-title::before {
+  content: '';
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/gallery-img-1.jpeg);
+  background-size: cover;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-title::after {
+  content: '!';
 }
 
 .hero-post-title {
@@ -303,14 +359,38 @@ img {
 }
 
 .prices-list {
-  border: 1px solid #ffffff;
   padding: 30px 21px;
   width: calc((100% - 30px) / 2);
+}
+
+.prices-list:first-child {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+
+.prices-list:last-child {
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
 }
 
 .prices-item {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.prices-item::before {
+  content: '';
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
 }
 
 .prices-item:not(:last-child) {
@@ -322,6 +402,10 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+
+.prices-item-text:first-child {
+  order: -1;
 }
 
 .prices-btn {
@@ -362,12 +446,23 @@ img {
   color: #303030;
 }
 
+.benefits-item span::after {
+  content: '+';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  text-align: center;
+  vertical-align: top;
+  color: transparent;
+  text-shadow: 0 7px 0 #ff6c00;
+}
+
 .benefits-item {
   width: 170px;
   height: 133px;
   padding: 20px 24px;
   text-align: center;
-  border: 1px solid;
+  background-color: #f7f7f7;
 }
 
 .benefits-item:nth-child(odd) {
@@ -403,6 +498,7 @@ img {
 /*--------------- BARBERS------------- */
 
 .barbers {
+  background-color: #f7f7f7;
 }
 
 .barbers-pre-title {
@@ -555,7 +651,13 @@ img {
 }
 
 .contact-wrap {
-  background-color: #303030;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #191c26;
+  background-image: url(../img/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc(50% - 15px) 100%;
 }
 
 .contact-container {
@@ -573,7 +675,6 @@ img {
 
 /*--------------- CONTACTS------------- */
 .contacts {
-  background-color: #696666;
   padding-left: 100px;
   flex-grow: 1;
 }
@@ -639,8 +740,16 @@ img {
 }
 .footer-list {
   display: flex;
+  align-items: center;
   gap: 40px;
   margin-left: auto;
+}
+
+.footer-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 
 .footer-item {
