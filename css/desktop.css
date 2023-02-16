@@ -1,0 +1,26 @@
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .container-tab {
+    max-width: 1200px;
+  }
+
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .barbers-item {
+    width: calc((100% - 60px) / 3);
+  }
+
+  .test-item {
+    width: calc((100% - 150px) / 6);
+  }
+
+  .gallery-item {
+    width: calc((100% - 90px) / 4);
+  }
+}
