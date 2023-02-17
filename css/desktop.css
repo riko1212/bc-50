@@ -12,6 +12,26 @@
     padding-bottom: 120px;
   }
 
+  .hero-soc {
+    width: 100px;
+    padding-left: 27px;
+  }
+  .hero-wrap {
+    padding-bottom: 210px;
+    background-image: var(--bg-gra), url(../img/hero-bg.jpeg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-wrap {
+      background-image: var(--bg-gra), url(../img/hero-bg-2x.jpeg);
+    }
+  }
+  .hero-title {
+    font-size: 72px;
+    line-height: 1.18;
+  }
+
   .barbers-item {
     width: calc((100% - 60px) / 3);
   }
